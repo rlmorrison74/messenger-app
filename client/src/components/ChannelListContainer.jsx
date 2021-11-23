@@ -40,6 +40,17 @@ export default function ChannelListContainer() {
             <TeamChannelPreview {...previewProps} type="team" />
           )}
         />
+        <ChannelSearch />
+        <ChannelList
+          filters={{}}
+          channelRenderFilterFn={() => {}}
+          List={(listProps) => (
+            <TeamChannelList {...listProps} type="messaging" />
+          )}
+          Preview={(previewProps) => (
+            <TeamChannelPreview {...previewProps} type="messaging" />
+          )}
+        />
       </div>
     </>
   );
