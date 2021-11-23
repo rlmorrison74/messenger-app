@@ -48,7 +48,7 @@ export default function Auth() {
     }
 
     window.location.reload();
-    
+
   };
 
   const switchMode = () => {
@@ -73,7 +73,7 @@ export default function Auth() {
               </div>
             )}
             <div className="auth__form-container_fields-content_input">
-              <label htmlFor="username">Full Name</label>
+              <label htmlFor="username">Username</label>
               <input
                 name="username"
                 type="text"
