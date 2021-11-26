@@ -6,11 +6,8 @@ import Cookies from "universal-cookie";
 import { ChannelContainer, ChannelListContainer, Auth } from "./components";
 
 const cookies = new Cookies();
-
 const apiKey = process.env.REACT_APP_STREAM_API_KEY;
-
 const client = StreamChat.getInstance(apiKey);
-
 const authToken = cookies.get("token");
 
 if (authToken) {
@@ -31,6 +28,7 @@ export default function App() {
   if (!authToken) return <Auth />;
   return (
     <div className="app__wrapper">
+      {console.log(apiKey)}
       <Chat client={client} theme="team light">
         <ChannelListContainer />
         <ChannelContainer />
